@@ -3,10 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Netlify Relay</title>
+    <title>Cloud Data Sync - Node Monitor</title>
+    <style>
+      body { font-family: sans-serif; line-height: 1.6; padding: 2rem; color: #333; }
+      .status-box { border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: #f9f9f9; }
+      .indicator { color: #28a745; font-weight: bold; }
+    </style>
   </head>
   <body>
-    <h1>Netlify Relay</h1>
-    <p>The Edge Function is configured on <code>/*</code>.</p>
+    <div class="status-box">
+      <h1>CloudSync Console</h1>
+      <p>System Status: <span class="indicator">Active</span></p>
+      <p>Service Endpoint: <code>Runtime_Edge_v2</code></p>
+      <small>Session ID: <span id="session-val"></span></small>
+    </div>
+    <script>
+      // ایجاد یک آیدی رندوم برای واقعی‌تر نشان دادن پنل مانیتورینگ
+      document.getElementById('session-val').innerText = Math.random().toString(36).substring(7).toUpperCase();
+    </script>
   </body>
 </html>
