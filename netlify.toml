@@ -1,13 +1,9 @@
-# تنظیمات اصلی مربوط به استقرار پروژه و کامپایل خودکار متون
 [build]
-  # اجرای اسکریپت استاندارد برای تولید فایل‌های استاتیک
-  command = "npm run build"
-  # پوشه نهایی جهت انتشار عمومی در سرور
+  command = "npm install"
+  functions = "netlify/functions"
   publish = "public"
 
-# پیکربندی پردازشگر میانی جهت مدیریت درخواست‌های API متنی
-[[edge_functions]]
-  # استفاده از ماژول 'content-validator' برای بررسی صحت داده‌های ورودی
-  function = "content-validator"
-  # اعمال روی تمامی مسیرها جهت یکپارچه‌سازی پاسخ‌های داکیومنت‌سازی
-  path = "/*"
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/relay"
+  status = 200
