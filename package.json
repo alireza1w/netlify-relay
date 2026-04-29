@@ -1,15 +1,9 @@
 {
-  "name": "app-telemetry-sync",
-  "version": "2.1.4",
-  "description": "A lightweight Edge utility for synchronizing application health metrics and diagnostic logs.",
-  "private": true,
-  "license": "Apache-2.0",
-  "scripts": {
-    "local": "netlify dev",
-    "deploy": "netlify deploy --prod",
-    "verify": "echo 'Validating integrity... Success'"
-  },
-  "devDependencies": {
-    "netlify-cli": "latest"
+  "name": "network-relay-service",
+  "version": "1.0.0",
+  "description": "Network connectivity analysis tool",
+  "main": "index.js",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
   }
 }
